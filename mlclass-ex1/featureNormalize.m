@@ -9,7 +9,14 @@ function [X_norm, mu, sigma] = featureNormalize(X)
 X_norm = X;
 mu = zeros(1, size(X, 2));
 sigma = zeros(1, size(X, 2));
-
+%=============================================================
+% 矩阵的维数是 m * n 
+% 其中n = the number of features, m = the number of training examples 
+% dim(mu) = 1 * n =  dim(sigma)
+% size 函数 获得行或者列的数目 
+% 其中size(index1, index2) 
+% index1代表矩阵, index2有两个参数1代表行数， 2代表列数
+%=============================================================
 % ====================== YOUR CODE HERE ======================
 % Instructions: First, for each feature dimension, compute the mean
 %               of the feature and subtract it from the dataset,
