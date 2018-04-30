@@ -38,6 +38,7 @@ num_features = size(X,2);
 for x=1:num_features,
   mu(x) = mean(X(:,x));
   sigma(x) = std(X(:,x));
+  sigma( sigma == 0) = 1; %to keep awaythe NaN's and Inf's
   X_norm(:,x) = (X_norm(:,x)-mu(x))/sigma(x);
 end;
 
